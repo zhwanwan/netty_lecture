@@ -1,0 +1,94 @@
+
+//gretty plugin
+
+/*
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'org.akhikhl.gretty:gretty:2.0.0'
+    }
+}
+
+if (!project.plugins.findPlugin(org.akhikhl.gretty.GrettyPlugin))
+    project.apply(plugin: org.akhikhl.gretty.GrettyPlugin)
+*/
+
+plugins {
+    id 'java'
+    id "org.gretty" version "2.2.0"
+}
+
+group 'com.group'
+version '1.0'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+//工作目录设置,以下就是默认设置,一般项目中不需要额外配置
+/*sourceSets {
+    main {
+        java {
+            srcDir 'src/main/java'
+        }
+        resources {
+            srcDir 'src/main/resources'
+        }
+    }
+}*/
+
+//private server config
+/*dependencies {
+    repositories {
+        maven {
+            url: "http://nexus.mycompany.com/nexus/public"
+        }
+    }
+}*/
+
+dependencies {
+    //testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    //io.netty:netty-all:4.1.36.Final
+
+    compile(
+            "io.netty:netty-all:4.1.10.Final",
+            "com.google.protobuf:protobuf-java:3.8.0",
+            "com.google.protobuf:protobuf-java-util:3.8.0"
+    )
+
+    compile 'joda-time:joda-time:2.10.2'
+
+    testCompile(
+            "junit:junit:4.12"
+    )
+
+    //resolve jar conflicts
+    /*providedCompile {
+
+    }*/
+}
+
+// set encoding
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+[compileJava, javadoc, compileTestJava]*.options*.encoding = "UTF-8"
+
+//https://gretty-gradle-plugin.github.io/gretty-doc/Gretty-configuration.html
+gretty {
+    httpEnabled = true
+    servletContainer = "tomcat8"
+    httpPort = 8080
+    contextPath = '/mygradle'
+    scanInterval = 1
+    fastReload = true
+    inplaceMode = "soft"
+    loggingLevel = "DEBUG"
+    consoleLogEnabled = true
+}

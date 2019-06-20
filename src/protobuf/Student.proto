@@ -1,0 +1,15 @@
+syntax = "proto2";
+
+package com.lec.protobuf;
+
+option optimize_for = SPEED; // default is SPEED
+option java_package = "com.lec.protobuf";
+option java_outer_classname = "DataInfo";
+
+message Student {
+
+    required string name = 1;
+    optional int32 age = 2;
+    optional string address = 3;
+
+}
