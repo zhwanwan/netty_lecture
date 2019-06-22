@@ -34,6 +34,11 @@ public final class StudentProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_lec_proto_StudentRep_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_lec_proto_StudentRepList_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_lec_proto_StudentRepList_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -47,12 +52,16 @@ public final class StudentProto {
       "est\022\020\n\010username\030\001 \001(\t\"\036\n\nMyResponse\022\020\n\010r" +
       "ealname\030\002 \001(\t\"\031\n\nStudentReq\022\013\n\003age\030\001 \001(\005" +
       "\"5\n\nStudentRep\022\014\n\004name\030\001 \001(\t\022\013\n\003age\030\002 \001(" +
-      "\005\022\014\n\004city\030\003 \001(\t2\255\001\n\016StudentService\022N\n\025Ge" +
-      "tRealNameByUsername\022\030.com.lec.proto.MyRe" +
-      "quest\032\031.com.lec.proto.MyResponse\"\000\022K\n\017Ge" +
-      "tStudentByAge\022\031.com.lec.proto.StudentReq" +
-      "\032\031.com.lec.proto.StudentRep\"\0000\001B\037\n\rcom.l" +
-      "ec.protoB\014StudentProtoP\001b\006proto3"
+      "\005\022\014\n\004city\030\003 \001(\t\"?\n\016StudentRepList\022-\n\nstu" +
+      "dentRep\030\001 \003(\0132\031.com.lec.proto.StudentRep" +
+      "2\207\002\n\016StudentService\022N\n\025GetRealNameByUser" +
+      "name\022\030.com.lec.proto.MyRequest\032\031.com.lec" +
+      ".proto.MyResponse\"\000\022K\n\017GetStudentByAge\022\031" +
+      ".com.lec.proto.StudentReq\032\031.com.lec.prot" +
+      "o.StudentRep\"\0000\001\022X\n\030GetStudentsWrapperBy" +
+      "Ages\022\031.com.lec.proto.StudentReq\032\035.com.le" +
+      "c.proto.StudentRepList\"\000(\001B\037\n\rcom.lec.pr" +
+      "otoB\014StudentProtoP\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -90,6 +99,12 @@ public final class StudentProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_lec_proto_StudentRep_descriptor,
         new String[] { "Name", "Age", "City", });
+    internal_static_com_lec_proto_StudentRepList_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_com_lec_proto_StudentRepList_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_lec_proto_StudentRepList_descriptor,
+        new String[] { "StudentRep", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

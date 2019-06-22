@@ -29,4 +29,37 @@ public class StudentServiceImpl extends StudentServiceGrpc.StudentServiceImplBas
 
         responseObserver.onCompleted(); //服务端处理完毕
     }
+
+    /**
+     * 服务端回调-->客户端请求对象
+     * @param responseObserver
+     * @return
+     */
+    @Override
+    public StreamObserver<StudentReq> getStudentsWrapperByAges(StreamObserver<StudentRepList> responseObserver) {
+
+        return new StreamObserver<StudentReq>() {
+            @Override
+            public void onNext(StudentReq value) {
+                System.out.println("onNext: " + value.getAge());
+            }
+
+            @Override
+            public void onError(Throwable t) {
+                //System.out.println(t.getMessage());
+                System.out.println("Exception exists...");
+            }
+
+            @Override
+            public void onCompleted() {
+                StudentRep rep1 = StudentRep.newBuilder().setName("张三").setAge(20).setCity("北京").build();
+                StudentRep rep2 = StudentRep.newBuilder().setName("李四").setAge(30).setCity("上海").build();
+
+                StudentRepList repList = StudentRepList.newBuilder()
+                        .addStudentRep(rep1).addStudentRep(rep2).build();
+                responseObserver.onNext(repList);
+                responseObserver.onCompleted();
+            }
+        };
+    }
 }
