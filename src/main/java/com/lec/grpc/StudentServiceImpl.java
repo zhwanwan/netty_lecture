@@ -3,6 +3,8 @@ package com.lec.grpc;
 import com.lec.proto.*;
 import io.grpc.stub.StreamObserver;
 
+import java.util.UUID;
+
 /**
  * @author zhwanwan
  * @create 2019-06-22 2:14 AM
@@ -32,6 +34,7 @@ public class StudentServiceImpl extends StudentServiceGrpc.StudentServiceImplBas
 
     /**
      * 服务端回调-->客户端请求对象
+     *
      * @param responseObserver
      * @return
      */
@@ -59,6 +62,28 @@ public class StudentServiceImpl extends StudentServiceGrpc.StudentServiceImplBas
                         .addStudentRep(rep1).addStudentRep(rep2).build();
                 responseObserver.onNext(repList);
                 responseObserver.onCompleted();
+            }
+        };
+    }
+
+    @Override
+    public StreamObserver<StreamRequest> biTalk(StreamObserver<StreamResponse> responseObserver) {
+        return new StreamObserver<StreamRequest>() {
+
+            @Override
+            public void onNext(StreamRequest value) {
+                System.out.println(value.getRequestInfo());
+                responseObserver.onNext(StreamResponse.newBuilder().setResponseInfo(UUID.randomUUID().toString()).build());
+            }
+
+            @Override
+            public void onError(Throwable t) {
+                System.out.println(t.getMessage());
+            }
+
+            @Override
+            public void onCompleted() {
+                System.out.println("Completed!");
             }
         };
     }
