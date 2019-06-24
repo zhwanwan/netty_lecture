@@ -19,7 +19,7 @@ private static final long serialVersionUID = 0L;
     studentRep_ = java.util.Collections.emptyList();
   }
 
-  @Override
+  @java.lang.Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return this.unknownFields;
@@ -30,7 +30,7 @@ private static final long serialVersionUID = 0L;
       throws com.google.protobuf.InvalidProtocolBufferException {
     this();
     if (extensionRegistry == null) {
-      throw new NullPointerException();
+      throw new java.lang.NullPointerException();
     }
     int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
@@ -45,11 +45,11 @@ private static final long serialVersionUID = 0L;
             break;
           case 10: {
             if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              studentRep_ = new java.util.ArrayList<StudentRep>();
+              studentRep_ = new java.util.ArrayList<com.lec.proto.StudentRep>();
               mutable_bitField0_ |= 0x00000001;
             }
             studentRep_.add(
-                input.readMessage(StudentRep.parser(), extensionRegistry));
+                input.readMessage(com.lec.proto.StudentRep.parser(), extensionRegistry));
             break;
           }
           default: {
@@ -76,29 +76,29 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return StudentProto.internal_static_com_lec_proto_StudentRepList_descriptor;
+    return com.lec.proto.StudentProto.internal_static_com_lec_proto_StudentRepList_descriptor;
   }
 
-  @Override
-  protected FieldAccessorTable
+  @java.lang.Override
+  protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return StudentProto.internal_static_com_lec_proto_StudentRepList_fieldAccessorTable
+    return com.lec.proto.StudentProto.internal_static_com_lec_proto_StudentRepList_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            StudentRepList.class, Builder.class);
+            com.lec.proto.StudentRepList.class, com.lec.proto.StudentRepList.Builder.class);
   }
 
   public static final int STUDENTREP_FIELD_NUMBER = 1;
-  private java.util.List<StudentRep> studentRep_;
+  private java.util.List<com.lec.proto.StudentRep> studentRep_;
   /**
    * <code>repeated .com.lec.proto.StudentRep studentRep = 1;</code>
    */
-  public java.util.List<StudentRep> getStudentRepList() {
+  public java.util.List<com.lec.proto.StudentRep> getStudentRepList() {
     return studentRep_;
   }
   /**
    * <code>repeated .com.lec.proto.StudentRep studentRep = 1;</code>
    */
-  public java.util.List<? extends StudentRepOrBuilder>
+  public java.util.List<? extends com.lec.proto.StudentRepOrBuilder> 
       getStudentRepOrBuilderList() {
     return studentRep_;
   }
@@ -111,19 +111,19 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>repeated .com.lec.proto.StudentRep studentRep = 1;</code>
    */
-  public StudentRep getStudentRep(int index) {
+  public com.lec.proto.StudentRep getStudentRep(int index) {
     return studentRep_.get(index);
   }
   /**
    * <code>repeated .com.lec.proto.StudentRep studentRep = 1;</code>
    */
-  public StudentRepOrBuilder getStudentRepOrBuilder(
+  public com.lec.proto.StudentRepOrBuilder getStudentRepOrBuilder(
       int index) {
     return studentRep_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
-  @Override
+  @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -133,7 +133,7 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
-  @Override
+  @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     for (int i = 0; i < studentRep_.size(); i++) {
@@ -142,7 +142,7 @@ private static final long serialVersionUID = 0L;
     unknownFields.writeTo(output);
   }
 
-  @Override
+  @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
@@ -157,15 +157,15 @@ private static final long serialVersionUID = 0L;
     return size;
   }
 
-  @Override
-  public boolean equals(final Object obj) {
+  @java.lang.Override
+  public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof StudentRepList)) {
+    if (!(obj instanceof com.lec.proto.StudentRepList)) {
       return super.equals(obj);
     }
-    StudentRepList other = (StudentRepList) obj;
+    com.lec.proto.StudentRepList other = (com.lec.proto.StudentRepList) obj;
 
     if (!getStudentRepList()
         .equals(other.getStudentRepList())) return false;
@@ -173,7 +173,7 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
-  @Override
+  @java.lang.Override
   public int hashCode() {
     if (memoizedHashCode != 0) {
       return memoizedHashCode;
@@ -189,69 +189,69 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static StudentRepList parseFrom(
+  public static com.lec.proto.StudentRepList parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static StudentRepList parseFrom(
+  public static com.lec.proto.StudentRepList parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static StudentRepList parseFrom(
+  public static com.lec.proto.StudentRepList parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static StudentRepList parseFrom(
+  public static com.lec.proto.StudentRepList parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static StudentRepList parseFrom(byte[] data)
+  public static com.lec.proto.StudentRepList parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static StudentRepList parseFrom(
+  public static com.lec.proto.StudentRepList parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static StudentRepList parseFrom(java.io.InputStream input)
+  public static com.lec.proto.StudentRepList parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static StudentRepList parseFrom(
+  public static com.lec.proto.StudentRepList parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static StudentRepList parseDelimitedFrom(java.io.InputStream input)
+  public static com.lec.proto.StudentRepList parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static StudentRepList parseDelimitedFrom(
+  public static com.lec.proto.StudentRepList parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static StudentRepList parseFrom(
+  public static com.lec.proto.StudentRepList parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static StudentRepList parseFrom(
+  public static com.lec.proto.StudentRepList parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -259,23 +259,23 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  @Override
+  @java.lang.Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(StudentRepList prototype) {
+  public static Builder newBuilder(com.lec.proto.StudentRepList prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-  @Override
+  @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
   }
 
-  @Override
+  @java.lang.Override
   protected Builder newBuilderForType(
-      BuilderParent parent) {
+      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
@@ -285,18 +285,18 @@ private static final long serialVersionUID = 0L;
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:com.lec.proto.StudentRepList)
-      StudentRepListOrBuilder {
+      com.lec.proto.StudentRepListOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return StudentProto.internal_static_com_lec_proto_StudentRepList_descriptor;
+      return com.lec.proto.StudentProto.internal_static_com_lec_proto_StudentRepList_descriptor;
     }
 
-    @Override
-    protected FieldAccessorTable
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return StudentProto.internal_static_com_lec_proto_StudentRepList_fieldAccessorTable
+      return com.lec.proto.StudentProto.internal_static_com_lec_proto_StudentRepList_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              StudentRepList.class, Builder.class);
+              com.lec.proto.StudentRepList.class, com.lec.proto.StudentRepList.Builder.class);
     }
 
     // Construct using com.lec.proto.StudentRepList.newBuilder()
@@ -305,7 +305,7 @@ private static final long serialVersionUID = 0L;
     }
 
     private Builder(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
@@ -315,7 +315,7 @@ private static final long serialVersionUID = 0L;
         getStudentRepFieldBuilder();
       }
     }
-    @Override
+    @java.lang.Override
     public Builder clear() {
       super.clear();
       if (studentRepBuilder_ == null) {
@@ -327,29 +327,29 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return StudentProto.internal_static_com_lec_proto_StudentRepList_descriptor;
+      return com.lec.proto.StudentProto.internal_static_com_lec_proto_StudentRepList_descriptor;
     }
 
-    @Override
-    public StudentRepList getDefaultInstanceForType() {
-      return StudentRepList.getDefaultInstance();
+    @java.lang.Override
+    public com.lec.proto.StudentRepList getDefaultInstanceForType() {
+      return com.lec.proto.StudentRepList.getDefaultInstance();
     }
 
-    @Override
-    public StudentRepList build() {
-      StudentRepList result = buildPartial();
+    @java.lang.Override
+    public com.lec.proto.StudentRepList build() {
+      com.lec.proto.StudentRepList result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
       return result;
     }
 
-    @Override
-    public StudentRepList buildPartial() {
-      StudentRepList result = new StudentRepList(this);
+    @java.lang.Override
+    public com.lec.proto.StudentRepList buildPartial() {
+      com.lec.proto.StudentRepList result = new com.lec.proto.StudentRepList(this);
       int from_bitField0_ = bitField0_;
       if (studentRepBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
@@ -364,50 +364,50 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
-    @Override
+    @java.lang.Override
     public Builder clone() {
       return super.clone();
     }
-    @Override
+    @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
-        Object value) {
+        java.lang.Object value) {
       return super.setField(field, value);
     }
-    @Override
+    @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return super.clearField(field);
     }
-    @Override
+    @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return super.clearOneof(oneof);
     }
-    @Override
+    @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, Object value) {
+        int index, java.lang.Object value) {
       return super.setRepeatedField(field, index, value);
     }
-    @Override
+    @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
-        Object value) {
+        java.lang.Object value) {
       return super.addRepeatedField(field, value);
     }
-    @Override
+    @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof StudentRepList) {
-        return mergeFrom((StudentRepList)other);
+      if (other instanceof com.lec.proto.StudentRepList) {
+        return mergeFrom((com.lec.proto.StudentRepList)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(StudentRepList other) {
-      if (other == StudentRepList.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.lec.proto.StudentRepList other) {
+      if (other == com.lec.proto.StudentRepList.getDefaultInstance()) return this;
       if (studentRepBuilder_ == null) {
         if (!other.studentRep_.isEmpty()) {
           if (studentRep_.isEmpty()) {
@@ -439,21 +439,21 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    @Override
+    @java.lang.Override
     public final boolean isInitialized() {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      StudentRepList parsedMessage = null;
+      com.lec.proto.StudentRepList parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (StudentRepList) e.getUnfinishedMessage();
+        parsedMessage = (com.lec.proto.StudentRepList) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -464,22 +464,22 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.util.List<StudentRep> studentRep_ =
+    private java.util.List<com.lec.proto.StudentRep> studentRep_ =
       java.util.Collections.emptyList();
     private void ensureStudentRepIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
-        studentRep_ = new java.util.ArrayList<StudentRep>(studentRep_);
+        studentRep_ = new java.util.ArrayList<com.lec.proto.StudentRep>(studentRep_);
         bitField0_ |= 0x00000001;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        StudentRep, StudentRep.Builder, StudentRepOrBuilder> studentRepBuilder_;
+        com.lec.proto.StudentRep, com.lec.proto.StudentRep.Builder, com.lec.proto.StudentRepOrBuilder> studentRepBuilder_;
 
     /**
      * <code>repeated .com.lec.proto.StudentRep studentRep = 1;</code>
      */
-    public java.util.List<StudentRep> getStudentRepList() {
+    public java.util.List<com.lec.proto.StudentRep> getStudentRepList() {
       if (studentRepBuilder_ == null) {
         return java.util.Collections.unmodifiableList(studentRep_);
       } else {
@@ -499,7 +499,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>repeated .com.lec.proto.StudentRep studentRep = 1;</code>
      */
-    public StudentRep getStudentRep(int index) {
+    public com.lec.proto.StudentRep getStudentRep(int index) {
       if (studentRepBuilder_ == null) {
         return studentRep_.get(index);
       } else {
@@ -510,7 +510,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .com.lec.proto.StudentRep studentRep = 1;</code>
      */
     public Builder setStudentRep(
-        int index, StudentRep value) {
+        int index, com.lec.proto.StudentRep value) {
       if (studentRepBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -527,7 +527,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .com.lec.proto.StudentRep studentRep = 1;</code>
      */
     public Builder setStudentRep(
-        int index, StudentRep.Builder builderForValue) {
+        int index, com.lec.proto.StudentRep.Builder builderForValue) {
       if (studentRepBuilder_ == null) {
         ensureStudentRepIsMutable();
         studentRep_.set(index, builderForValue.build());
@@ -540,7 +540,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>repeated .com.lec.proto.StudentRep studentRep = 1;</code>
      */
-    public Builder addStudentRep(StudentRep value) {
+    public Builder addStudentRep(com.lec.proto.StudentRep value) {
       if (studentRepBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -557,7 +557,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .com.lec.proto.StudentRep studentRep = 1;</code>
      */
     public Builder addStudentRep(
-        int index, StudentRep value) {
+        int index, com.lec.proto.StudentRep value) {
       if (studentRepBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -574,7 +574,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .com.lec.proto.StudentRep studentRep = 1;</code>
      */
     public Builder addStudentRep(
-        StudentRep.Builder builderForValue) {
+        com.lec.proto.StudentRep.Builder builderForValue) {
       if (studentRepBuilder_ == null) {
         ensureStudentRepIsMutable();
         studentRep_.add(builderForValue.build());
@@ -588,7 +588,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .com.lec.proto.StudentRep studentRep = 1;</code>
      */
     public Builder addStudentRep(
-        int index, StudentRep.Builder builderForValue) {
+        int index, com.lec.proto.StudentRep.Builder builderForValue) {
       if (studentRepBuilder_ == null) {
         ensureStudentRepIsMutable();
         studentRep_.add(index, builderForValue.build());
@@ -602,7 +602,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .com.lec.proto.StudentRep studentRep = 1;</code>
      */
     public Builder addAllStudentRep(
-        Iterable<? extends StudentRep> values) {
+        java.lang.Iterable<? extends com.lec.proto.StudentRep> values) {
       if (studentRepBuilder_ == null) {
         ensureStudentRepIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -642,14 +642,14 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>repeated .com.lec.proto.StudentRep studentRep = 1;</code>
      */
-    public StudentRep.Builder getStudentRepBuilder(
+    public com.lec.proto.StudentRep.Builder getStudentRepBuilder(
         int index) {
       return getStudentRepFieldBuilder().getBuilder(index);
     }
     /**
      * <code>repeated .com.lec.proto.StudentRep studentRep = 1;</code>
      */
-    public StudentRepOrBuilder getStudentRepOrBuilder(
+    public com.lec.proto.StudentRepOrBuilder getStudentRepOrBuilder(
         int index) {
       if (studentRepBuilder_ == null) {
         return studentRep_.get(index);  } else {
@@ -659,7 +659,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>repeated .com.lec.proto.StudentRep studentRep = 1;</code>
      */
-    public java.util.List<? extends StudentRepOrBuilder>
+    public java.util.List<? extends com.lec.proto.StudentRepOrBuilder> 
          getStudentRepOrBuilderList() {
       if (studentRepBuilder_ != null) {
         return studentRepBuilder_.getMessageOrBuilderList();
@@ -670,31 +670,31 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>repeated .com.lec.proto.StudentRep studentRep = 1;</code>
      */
-    public StudentRep.Builder addStudentRepBuilder() {
+    public com.lec.proto.StudentRep.Builder addStudentRepBuilder() {
       return getStudentRepFieldBuilder().addBuilder(
-          StudentRep.getDefaultInstance());
+          com.lec.proto.StudentRep.getDefaultInstance());
     }
     /**
      * <code>repeated .com.lec.proto.StudentRep studentRep = 1;</code>
      */
-    public StudentRep.Builder addStudentRepBuilder(
+    public com.lec.proto.StudentRep.Builder addStudentRepBuilder(
         int index) {
       return getStudentRepFieldBuilder().addBuilder(
-          index, StudentRep.getDefaultInstance());
+          index, com.lec.proto.StudentRep.getDefaultInstance());
     }
     /**
      * <code>repeated .com.lec.proto.StudentRep studentRep = 1;</code>
      */
-    public java.util.List<StudentRep.Builder>
+    public java.util.List<com.lec.proto.StudentRep.Builder> 
          getStudentRepBuilderList() {
       return getStudentRepFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        StudentRep, StudentRep.Builder, StudentRepOrBuilder>
+        com.lec.proto.StudentRep, com.lec.proto.StudentRep.Builder, com.lec.proto.StudentRepOrBuilder> 
         getStudentRepFieldBuilder() {
       if (studentRepBuilder_ == null) {
         studentRepBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            StudentRep, StudentRep.Builder, StudentRepOrBuilder>(
+            com.lec.proto.StudentRep, com.lec.proto.StudentRep.Builder, com.lec.proto.StudentRepOrBuilder>(
                 studentRep_,
                 ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
@@ -703,13 +703,13 @@ private static final long serialVersionUID = 0L;
       }
       return studentRepBuilder_;
     }
-    @Override
+    @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFields(unknownFields);
     }
 
-    @Override
+    @java.lang.Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
@@ -720,18 +720,18 @@ private static final long serialVersionUID = 0L;
   }
 
   // @@protoc_insertion_point(class_scope:com.lec.proto.StudentRepList)
-  private static final StudentRepList DEFAULT_INSTANCE;
+  private static final com.lec.proto.StudentRepList DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new StudentRepList();
+    DEFAULT_INSTANCE = new com.lec.proto.StudentRepList();
   }
 
-  public static StudentRepList getDefaultInstance() {
+  public static com.lec.proto.StudentRepList getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
   private static final com.google.protobuf.Parser<StudentRepList>
       PARSER = new com.google.protobuf.AbstractParser<StudentRepList>() {
-    @Override
+    @java.lang.Override
     public StudentRepList parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -744,13 +744,13 @@ private static final long serialVersionUID = 0L;
     return PARSER;
   }
 
-  @Override
+  @java.lang.Override
   public com.google.protobuf.Parser<StudentRepList> getParserForType() {
     return PARSER;
   }
 
-  @Override
-  public StudentRepList getDefaultInstanceForType() {
+  @java.lang.Override
+  public com.lec.proto.StudentRepList getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

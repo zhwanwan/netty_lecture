@@ -10,12 +10,12 @@ public interface StudentRepListOrBuilder extends
   /**
    * <code>repeated .com.lec.proto.StudentRep studentRep = 1;</code>
    */
-  java.util.List<StudentRep>
+  java.util.List<com.lec.proto.StudentRep> 
       getStudentRepList();
   /**
    * <code>repeated .com.lec.proto.StudentRep studentRep = 1;</code>
    */
-  StudentRep getStudentRep(int index);
+  com.lec.proto.StudentRep getStudentRep(int index);
   /**
    * <code>repeated .com.lec.proto.StudentRep studentRep = 1;</code>
    */
@@ -23,11 +23,11 @@ public interface StudentRepListOrBuilder extends
   /**
    * <code>repeated .com.lec.proto.StudentRep studentRep = 1;</code>
    */
-  java.util.List<? extends StudentRepOrBuilder>
+  java.util.List<? extends com.lec.proto.StudentRepOrBuilder> 
       getStudentRepOrBuilderList();
   /**
    * <code>repeated .com.lec.proto.StudentRep studentRep = 1;</code>
    */
-  StudentRepOrBuilder getStudentRepOrBuilder(
-          int index);
+  com.lec.proto.StudentRepOrBuilder getStudentRepOrBuilder(
+      int index);
 }
