@@ -34,7 +34,8 @@ public class NioServer {
         Selector selector = Selector.open();
         //将channel注册到selector
         serverSocketChannel.register(selector, SelectionKey.OP_ACCEPT);
-        Charset charset = Charset.forName("UTF-8");
+        Charset charset = Charset.forName("utf-8");
+
         //开始服务器监听
         while (true) {
             try {
@@ -57,12 +58,30 @@ public class NioServer {
                         } else if (key.isReadable()) {
                             client = (SocketChannel) key.channel();
                             ByteBuffer readBuffer = ByteBuffer.allocate(1024);
+                            ByteBuffer writeBuffer = ByteBuffer.allocate(1024);
                             int count = client.read(readBuffer);
                             if (count > 0) {
                                 readBuffer.flip(); //反转
                                 //获取数据
                                 String receivedMessage = String.valueOf(charset.decode(readBuffer).array());
                                 System.out.println(client + ": " + receivedMessage);
+
+                                String senderKey = null;
+                                for (Map.Entry<String, SocketChannel> entry : clientMap.entrySet()) {
+                                    if (client == entry.getValue()) {
+                                        senderKey = entry.getKey();
+                                        break;
+                                    }
+                                }
+
+                                for (Map.Entry<String, SocketChannel> entry : clientMap.entrySet()) {
+                                    SocketChannel value = entry.getValue();
+                                    writeBuffer.clear();
+                                    writeBuffer.put((senderKey + ": " + receivedMessage).getBytes());//将数据放入buffer--读入buffer
+                                    writeBuffer.flip();
+                                    value.write(writeBuffer);//将buffer数据写入SC--客户端输出数据
+                                }
+
                             }
 
                         }
