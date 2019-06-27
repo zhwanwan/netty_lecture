@@ -49,6 +49,7 @@ public class NioTest12 {
         }
 
         while (true) {
+
             int numbers = selector.select();
             System.out.println("numbers: " + numbers);
             Set<SelectionKey> selectionKeys = selector.selectedKeys();
