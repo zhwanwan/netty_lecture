@@ -9,6 +9,8 @@ import io.netty.handler.codec.http.websocketx.WebSocketServerProtocolHandler;
 import io.netty.handler.stream.ChunkedWriteHandler;
 
 /**
+ * websocket基于Html5的协议
+ *
  * @author zhwanwan
  * @create 2019-06-12 8:00 PM
  */
@@ -16,6 +18,7 @@ public class WebSocketChannelInitializer extends ChannelInitializer<SocketChanne
 
     @Override
     protected void initChannel(SocketChannel ch) throws Exception {
+
         ChannelPipeline pipeline = ch.pipeline();
 
         pipeline.addLast(new HttpServerCodec());

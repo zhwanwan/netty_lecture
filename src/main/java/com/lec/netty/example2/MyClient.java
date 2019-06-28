@@ -14,6 +14,7 @@ public class MyClient {
 
     public static void main(String[] args) {
 
+        //构造事件循环组
         EventLoopGroup eventLoopGroup = new NioEventLoopGroup();
 
         try {

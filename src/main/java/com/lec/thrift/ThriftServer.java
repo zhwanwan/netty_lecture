@@ -8,7 +8,7 @@ import org.apache.thrift.transport.TFramedTransport;
 import org.apache.thrift.transport.TNonblockingServerSocket;
 import thrift.generated.PersonService;
 
-/**
+/** Thrift是RPC框架的一种,底层也采用Netty作为数据载体
  * @author zhwanwan
  * @create 2019-06-21 8:30 AM
  */

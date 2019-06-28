@@ -24,6 +24,7 @@ public class TestServerHandler extends SimpleChannelInboundHandler<MyDataInfo.My
             MyDataInfo.Cat cat = msg.getCat();
             System.out.println(cat.getName() + " " + cat.getCity());
         }
+        ctx.channel().writeAndFlush(msg);
     }
 
     @Override

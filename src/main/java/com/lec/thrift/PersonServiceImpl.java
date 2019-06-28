@@ -6,7 +6,8 @@ import thrift.generated.Person;
 import thrift.generated.PersonService;
 
 /**
- * 如何生成Thrift类: thrift --gen java src/thrift/data.thrift
+ * 如何生成Thrift类:
+ * thrift --gen java src/thrift/data.thrift
  *
  * @author zhwanwan
  * @create 2019-06-21 8:24 AM

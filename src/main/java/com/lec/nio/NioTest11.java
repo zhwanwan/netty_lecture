@@ -10,6 +10,8 @@ import java.util.Arrays;
 
 /**
  * 关于Buffer的Scattering与Gathering
+ * windows可以使用telnet:
+ * >>telnet localhost 8899
  *
  * @author zhwanwan
  * @create 2019-06-27 1:30 PM

@@ -8,7 +8,12 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
 
-/**
+/** 一个基于长连接完整的例子--WebSocketChannelInitializer
+ * 通过浏览器进行测试,使用ws协议,首先向服务发起http连接然后升级成websocket,接着通过JS相关的API进行处理
+ * 页面参见webapp/test.html
+ * 启动方法:
+ * 1.Run MyServer.main
+ * 2.Run test.html
  * @author zhwanwan
  * @create 2019-06-12 9:31 AM
  */

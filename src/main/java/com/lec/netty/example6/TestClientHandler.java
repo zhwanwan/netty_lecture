@@ -12,7 +12,7 @@ import java.util.Random;
 public class TestClientHandler extends SimpleChannelInboundHandler<MyDataInfo.MyMessage> {
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, MyDataInfo.MyMessage msg) throws Exception {
-
+        System.out.println(msg.getDataType());
     }
 
     @Override

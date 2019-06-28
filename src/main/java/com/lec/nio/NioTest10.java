@@ -14,6 +14,7 @@ import java.nio.channels.FileLock;
 public class NioTest10 {
 
     public static void main(String[] args) throws IOException {
+
         RandomAccessFile randomAccessFile = new RandomAccessFile("NioTest9.txt","rw");
         FileChannel fileChannel = randomAccessFile.getChannel();
 
@@ -22,6 +23,7 @@ public class NioTest10 {
         System.out.println("Lock Type: " + fileLock.isShared());
 
         fileLock.release(); //释放锁
+
         randomAccessFile.close();
     }
 }

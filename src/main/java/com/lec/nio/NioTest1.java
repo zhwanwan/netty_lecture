@@ -8,6 +8,7 @@ import java.security.SecureRandom;
  * @create 2019-06-26 1:48 PM
  */
 public class NioTest1 {
+
     public static void main(String[] args) {
 
         IntBuffer buffer = IntBuffer.allocate(10);

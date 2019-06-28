@@ -13,26 +13,26 @@
 
         socket = new WebSocket("ws://localhost:8899/ws");
 
+        //server--handlerAdded
+        socket.onopen = function (event) {
+            var ta = document.getElementById("responseText");
+            ta.value = "连接开启!";
+        }
+
         //server--read0
         socket.onmessage = function (event) {
             var ta = document.getElementById("responseText");
             ta.value = ta.value + "\n" + event.data;
         }
 
-        //server--handlerAdded
-        socket.onopen = function (event) {
-            var ta = document.getElementById("responseText");
-            ta.value = "Connection Started~~~";
-        }
 
         //server--handlerRemoved
         socket.onclose = function (event) {
             var ta = document.getElementById("responseText");
-            ta.value = ta.value + "\n" + "Connection closed~~~";
+            ta.value = ta.value + "\n" + "连接关闭!";
         }
-
     } else {
-        alert("Browser doesn't support WebSocket");
+        alert("浏览器不支持WebSocket!");
     }
 
     function send(message) {
@@ -42,7 +42,7 @@
         if (socket.readyState === WebSocket.OPEN) {
             socket.send(message);
         } else {
-            alert("Connection is not started!")
+            alert("连接尚未开始!")
         }
     }
 

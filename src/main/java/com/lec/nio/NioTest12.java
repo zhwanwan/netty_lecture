@@ -53,8 +53,9 @@ public class NioTest12 {
             int numbers = selector.select();
             System.out.println("numbers: " + numbers);
             Set<SelectionKey> selectionKeys = selector.selectedKeys();
-            System.out.println("selectedKeys: " + selectionKeys);
+            //System.out.println("selectedKeys: " + selectionKeys);
             Iterator<SelectionKey> iterator = selectionKeys.iterator();
+            ByteBuffer byteBuffer = ByteBuffer.allocate(512);
             while (iterator.hasNext()) {
                 SelectionKey selectionKey = iterator.next();
 
@@ -71,7 +72,6 @@ public class NioTest12 {
                     //获取客户端SC
                     SocketChannel socketChannel = (SocketChannel) selectionKey.channel();
                     int bytesRead = 0;
-                    ByteBuffer byteBuffer = ByteBuffer.allocate(512);
                     while (true) {
                         byteBuffer.clear();
                         int read = socketChannel.read(byteBuffer);

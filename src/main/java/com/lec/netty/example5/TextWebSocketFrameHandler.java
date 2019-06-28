@@ -14,7 +14,7 @@ public class TextWebSocketFrameHandler extends SimpleChannelInboundHandler<TextW
 
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, TextWebSocketFrame msg) throws Exception {
-        System.out.println("Receive Message: " + msg.text());
+        System.out.println("客户端消息: " + msg.text());
         //send to client
         ctx.channel().writeAndFlush(new TextWebSocketFrame("服务器时间: " + LocalDateTime.now()));
     }
@@ -34,7 +34,7 @@ public class TextWebSocketFrameHandler extends SimpleChannelInboundHandler<TextW
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
         //cause exception
-        System.out.println("exception happened");
+        System.out.println("发生异常");
         ctx.close(); //need close if exists exception
     }
 }

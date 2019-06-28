@@ -22,6 +22,7 @@ public class ThriftClient {
         TTransport transport = new TFramedTransport(new TSocket("localhost", 8899));
         TProtocol protocol = new TCompactProtocol(transport);
         PersonService.Client client = new PersonService.Client(protocol);
+
         try {
             transport.open();
             Person person = client.getPersonByUsername("张三");

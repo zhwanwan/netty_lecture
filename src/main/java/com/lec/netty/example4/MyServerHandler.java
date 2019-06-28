@@ -4,7 +4,9 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.handler.timeout.IdleStateEvent;
 
-/** User Defined Handler
+/**
+ * User Defined Handler
+ *
  * @author zhwanwan
  * @create 2019-06-12 8:34 AM
  */
@@ -21,13 +23,13 @@ public class MyServerHandler extends ChannelInboundHandlerAdapter {
 
             switch (event.state()) {
                 case READER_IDLE:
-                    eventType = "Read Idle";
+                    eventType = "读空闲";
                     break;
                 case WRITER_IDLE:
-                    eventType = "Write Idle";
+                    eventType = "写空闲";
                     break;
                 case ALL_IDLE:
-                    eventType = "Read & Write Idle";
+                    eventType = "读写空闲";
                     break;
             }
 
