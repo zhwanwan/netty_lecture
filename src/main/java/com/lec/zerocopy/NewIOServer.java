@@ -28,6 +28,7 @@ public class NewIOServer {
             socketChannel.configureBlocking(true);//此处没有Selector,一定是阻塞的,可以不写
 
             int readCount = 0;
+
             while (-1 != readCount) {
                 try {
                     readCount = socketChannel.read(byteBuffer); //将数据读入服务端Channel
@@ -42,14 +43,8 @@ public class NewIOServer {
                  */
                 byteBuffer.rewind();
                 //byteBuffer.clear(); //可以用在read前
-
             }
-
         }
-
-
-
-
     }
 
 }
