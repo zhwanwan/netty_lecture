@@ -68,7 +68,7 @@ dependencies {
     //io.netty:netty-all:4.1.36.Final
 
     compile(
-            "io.netty:netty-all:4.1.10.Final",
+            "io.netty:netty-all:4.1.15.Final",
             "com.google.protobuf:protobuf-java:3.8.0",
             "com.google.protobuf:protobuf-java-util:3.8.0",
             "org.apache.thrift:libthrift:0.12.0",
