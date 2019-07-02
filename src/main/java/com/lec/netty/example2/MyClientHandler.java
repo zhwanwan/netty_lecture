@@ -5,7 +5,7 @@ import io.netty.channel.SimpleChannelInboundHandler;
 
 import java.time.LocalDateTime;
 
-/**
+/** sub-reactor回调
  * @author zhwanwan
  * @create 2019-06-06 6:36 AM
  */
@@ -15,7 +15,7 @@ public class MyClientHandler extends SimpleChannelInboundHandler {
     protected void channelRead0(ChannelHandlerContext ctx, Object msg) throws Exception {
 
         System.out.println(ctx.channel().remoteAddress());
-        System.out.println("client output:" + msg);
+        System.out.println("client output:" + msg); //读取服务端信息
         ctx.writeAndFlush("from client: " + LocalDateTime.now());
 
     }

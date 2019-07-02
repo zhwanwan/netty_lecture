@@ -13,3 +13,4 @@ logs/
 .gradle/
 build/
 out/
+src/test/

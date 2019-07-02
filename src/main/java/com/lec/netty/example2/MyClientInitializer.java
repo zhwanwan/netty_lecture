@@ -9,14 +9,16 @@ import io.netty.handler.codec.string.StringDecoder;
 import io.netty.handler.codec.string.StringEncoder;
 import io.netty.util.CharsetUtil;
 
-/**
+/** ChannelPipeline --> 类似于一系列handler集合
  * @author zhwanwan
  * @create 2019-06-06 6:35 AM
  */
 public class MyClientInitializer extends ChannelInitializer<SocketChannel> {
     @Override
     protected void initChannel(SocketChannel ch) throws Exception {
+
         ChannelPipeline pipeline = ch.pipeline();
+
         pipeline.addLast(new LengthFieldBasedFrameDecoder(
                 Integer.MAX_VALUE, 0, 4, 0, 4));
         pipeline.addLast(new LengthFieldPrepender(4));
