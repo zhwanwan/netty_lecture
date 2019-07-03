@@ -4,6 +4,9 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 
 import java.util.UUID;
+import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 /**
  * @author zhwanwan
@@ -24,6 +27,12 @@ public class MyServerHandler extends SimpleChannelInboundHandler<String> {
     protected void channelRead0(ChannelHandlerContext ctx, String msg) throws Exception {
         System.out.println(ctx.channel().remoteAddress() + " " + msg); //read读取客户端信息
         ctx.channel().writeAndFlush("from server: " + UUID.randomUUID()); //向通道输出服务端消息
+
+        //业务线程池
+        /*ExecutorService executorService = Executors.newCachedThreadPool();
+        executorService.submit(() -> {
+            //实现业务逻辑,不会阻塞主线程
+        });*/
     }
 
     /**
