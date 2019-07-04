@@ -26,7 +26,11 @@ public class MyServerHandler extends SimpleChannelInboundHandler<String> {
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, String msg) throws Exception {
         System.out.println(ctx.channel().remoteAddress() + " " + msg); //read读取客户端信息
+
         ctx.channel().writeAndFlush("from server: " + UUID.randomUUID()); //向通道输出服务端消息
+
+        //ctx.writeAndFlush("from server: " + UUID.randomUUID());
+        //ctx依附于pipeline
 
         //业务线程池
         /*ExecutorService executorService = Executors.newCachedThreadPool();
