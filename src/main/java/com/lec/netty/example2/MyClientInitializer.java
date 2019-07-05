@@ -20,10 +20,10 @@ public class MyClientInitializer extends ChannelInitializer<SocketChannel> {
         ChannelPipeline pipeline = ch.pipeline();
 
         pipeline.addLast(new LengthFieldBasedFrameDecoder(
-                Integer.MAX_VALUE, 0, 4, 0, 4));
-        pipeline.addLast(new LengthFieldPrepender(4));
-        pipeline.addLast(new StringDecoder(CharsetUtil.UTF_8));
-        pipeline.addLast(new StringEncoder(CharsetUtil.UTF_8));
-        pipeline.addLast(new MyClientHandler()); //customized handler
+                Integer.MAX_VALUE, 0, 4, 0, 4)); //inbound
+        pipeline.addLast(new LengthFieldPrepender(4)); //inboud
+        pipeline.addLast(new StringDecoder(CharsetUtil.UTF_8)); //decoder, inbound
+        pipeline.addLast(new StringEncoder(CharsetUtil.UTF_8)); //encoder, outbound
+        pipeline.addLast(new MyClientHandler()); //customized handler, inbound
     }
 }
